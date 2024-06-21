@@ -54,7 +54,7 @@ describe("Models are in correct folder and named correctly", () => {
     expect(fs.existsSync("./models/machine.model.js")).toEqual(true);
   });
   it("has a special events model", () => {
-    expect(fs.existsSync("./models/special-event.model.js")).toEqual(true);
+    expect(fs.existsSync("./models/special-events.model.js")).toEqual(true);
   });
 });
 
@@ -91,7 +91,7 @@ describe("Each model has an index route", () => {
   });
 
   it("has an index route for people", async () => {
-    const response = await request(app).get("/persons");
+    const response = await request(app).get("/people");
     expect(response.body).toEqual(data.persons);
   });
 
